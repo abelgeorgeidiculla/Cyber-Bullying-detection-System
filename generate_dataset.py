@@ -76,7 +76,7 @@ for _ in range(5000):
         text = add_emojis(text)
         labels[category] = 1
     else:
-        text = random.choice(neutral_phrases)
+        text = fake.sentence()
     
     row = {
         'text': text,
@@ -102,4 +102,5 @@ print(f"Neutral texts: {neutral_count}")
 # Save to CSV
 df.to_csv("cyberbullying_dataset_5000.csv", index=False)
 print("\n Successfully generated balanced 5000-sample dataset")
+
 print("Saved as 'cyberbullying_dataset_5000.csv'")
