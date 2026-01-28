@@ -1,7 +1,7 @@
 import joblib
 
 # Load your trained pipeline
-pipeline = joblib.load("pipeline.pkl")
+pipeline = joblib.load("final_model.pkl")
 
 # Test sentences (a mix of good, bad, threatening, hateful, and neutral)
 texts = [
@@ -39,3 +39,4 @@ predictions = pipeline.predict(texts)
 for text, labels in zip(texts, predictions):
     print("\n📝 Text:", text)
     print("💡 Prediction:", labels)
+
