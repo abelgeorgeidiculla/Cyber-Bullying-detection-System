@@ -1,4 +1,7 @@
 Flask
-joblib
-scikit-learn
 pandas
+numpy
+scikit-learn
+joblib
+Faker
+nltk
