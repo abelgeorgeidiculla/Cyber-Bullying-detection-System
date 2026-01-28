@@ -15,7 +15,10 @@ df = pd.read_csv('cyberbullying_dataset_5000.csv')
 
 # ✅ Extract features and labels
 X = df['text']
-y = df.drop(columns=['text'])
+
+# FIX: Explicitly list your target categories so metadata isn't included
+label_columns = ['insult', 'threat', 'identity_hate', 'gender', 'religion', 'ethnicity']
+y = df[label_columns]
 
 # 🎯 Train-test split
 print("🔀 Splitting data...")
@@ -58,4 +61,5 @@ print("💾 Saving model to 'final_model.pkl'...")
 joblib.dump(final_pipeline, 'final_model.pkl')
 
 print("✅ Model training and saving complete!")
+
 
