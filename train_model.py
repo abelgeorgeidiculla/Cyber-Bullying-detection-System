@@ -11,7 +11,7 @@ import joblib
 
 # 🚀 Load dataset
 print(" Loading dataset...")
-df = pd.read_csv('cyberbullying_dataset.csv')
+df = pd.read_csv('cyberbullying_dataset_5000.csv')
 
 # ✅ Extract features and labels
 X = df['text']
@@ -58,3 +58,4 @@ print("💾 Saving model to 'final_model.pkl'...")
 joblib.dump(final_pipeline, 'final_model.pkl')
 
 print("✅ Model training and saving complete!")
+
